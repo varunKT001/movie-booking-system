@@ -1,0 +1,14 @@
+CREATE TABLE Customer
+(
+  Cust_Id VARCHAR(5) NOT NULL,
+  Cust_Name VARCHAR(20) NOT NULL,
+  Cust_Phone VARCHAR(15) NOT NULL,
+  PRIMARY KEY (Cust_Id)
+  );
+  INSERT INTO Customer VALUES
+  ('P1', 'AMAN KUMAR', '12345678'),
+  ('P2', 'ANSH RUSIA', '23456789'),
+  ('P3', 'SHUBHAJEET PRADHAN', '34567891'),
+  ('P4', 'VARUN KUMAR TIWARI', '45678912');
+  
+  SELECT * FROM Customer
