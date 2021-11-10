@@ -1,11 +1,7 @@
 # Movie-Booking-System
-## Team Members
+## Team Members      
 
-
-
-|NAME                ||ROLL NO|
-
-|    AMAN KUMAR   |-------------------|`2020IMT-007`            |            
-|    ANSH RUSIA   |--------------------- |`2020IMT-012`            |            
-|    SHUBHAJEET PRADHAN   |---------|`2020IMT-097`            |            
-|    VARUN KUMAR TIWARI   |----------|`2020IMT-112`            |           
+1. Aman Kumar: 2020IMT-007
+2. Ansh Rusia: 2020IMT-012
+3. Shubhajeet Pradhan: 2020IMT-097
+4. Varun Kumar Tiwari: 2020IMT-112
