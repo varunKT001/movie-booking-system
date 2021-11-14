@@ -49,7 +49,7 @@ CREATE TABLE Shows
 CREATE TABLE Ticket
 (
   ticket_Id VARCHAR NOT NULL,
-  price INT NOT NULL,
+  price VARCHAR NOT NULL,
   Cust_Id VARCHAR NOT NULL,
   show_Id VARCHAR NOT NULL,
   PRIMARY KEY (ticket_Id),
