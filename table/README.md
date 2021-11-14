@@ -124,10 +124,10 @@ CREATE TABLE Ticket
   FOREIGN KEY (Show_Id) REFERENCES Shows(show_Id)
 );
 INSERT INTO Ticket VALUES
-  ('TCK1', 'P1', 'SHW1', '750'),
-  ('TCK2', 'P2', 'SHW2', '300'),
-  ('TCK3', 'P3', 'SHW3', '925'),
-  ('TCK4', 'P4', 'SHW4', '1030');
+  ('TCK1', '750', 'P1', 'SHW1'),
+  ('TCK2', '300', 'P2', 'SHW2'),
+  ('TCK3', '925', 'P3', 'SHW3'),
+  ('TCK4', '1030', 'P4', 'SHW4');
 
   SELECT * FROM Ticket
 ```
