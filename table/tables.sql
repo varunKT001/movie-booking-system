@@ -17,12 +17,11 @@ CREATE TABLE movie_room
 
 CREATE TABLE Movie
 (
-  movie_Id VARCHAR NOT NULL,
   movie_Name VARCHAR NOT NULL,
   duration VARCHAR NOT NULL,
   genre VARCHAR NOT NULL,
   rating VARCHAR NOT NULL,
-  PRIMARY KEY (movie_Id)
+  PRIMARY KEY (movie_Name)
 );
 
 CREATE TABLE Seat
@@ -41,10 +40,10 @@ CREATE TABLE Shows
   show_slot VARCHAR NOT NULL,
   show_Date DATE NOT NULL,
   ent_Id VARCHAR NOT NULLI
-  movie_Id VARCHAR NOT NULL,
+  movie_Name VARCHAR NOT NULL,
   PRIMARY KEY (show_Id),
   FOREIGN KEY (ent_Id) REFERENCES Movie_room(ent_Id),
-  FOREIGN KEY (movie_Id) REFERENCES Movie(movie_Id)
+  FOREIGN KEY (movie_Name) REFERENCES Movie(movie_Name)
 );
 
 CREATE TABLE Ticket
