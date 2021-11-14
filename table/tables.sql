@@ -29,7 +29,7 @@ CREATE TABLE Seat
 (
   seat_Id VARCHAR NOT NULL,
   seat_Number INT NOT NULL,
-  seat_Row INT NOT NULL,
+  seat_Row VARCHAR NOT NULL,
   ent_Id VARCHAR NOT NULL,
   PRIMARY KEY (seat_Id),
   FOREIGN KEY (ent_Id) REFERENCES movie_Room(ent_Id)

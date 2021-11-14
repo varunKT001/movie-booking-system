@@ -14,7 +14,7 @@ CREATE TABLE movie
   ('F1', 'Inception', '148', 'Thriller', '5'),
   ('F2', 'Iron-Man 2', '100', 'Sci-Fi', '5'),
   ('F3', 'The Eternals', '157', 'Sci-Fi', '4');
-  
+
   SELECT * FROM Movie
 ```
 
@@ -32,7 +32,7 @@ INSERT INTO movie_Room VALUES
   ('ENT1', '5',  'Silver'),
   ('ENT2', '5',  'Gold'),
   ('ENT3', '5',  'Executive');
-  
+
   SELECT * FROM movie_Room
 ```
 
@@ -52,7 +52,7 @@ INSERT INTO Customer VALUES
   ('P2', 'ANSH RUSIA', '20', '23456789'),
   ('P3', 'SHUBHAJEET PRADHAN', '20', '34567891'),
   ('P4', 'VARUN KUMAR TIWARI', '20', '45678912');
-  
+
   SELECT * FROM Customer
 ```
 
@@ -75,7 +75,7 @@ INSERT INTO Shows VALUES
   ('SHW2', 'slotB', '2021-08-05', 'ENT2', 'F1'),
   ('SHW3', 'slotC', '2021-06-11', 'ENT3', 'F2'),
   ('SHW4', 'slotD', '2021-06-23', 'ENT3', 'F2' );
-  
+
   SELECT * FROM Shows
 ```
 
@@ -86,28 +86,28 @@ CREATE TABLE seat
 (
   seat_Id VARCHAR NOT NULL,
   seat_Number INT NOT NULL,
-  seat_Row INT NOT NULL,
+  seat_Row VARCHAR NOT NULL,
   ent_Id VARCHAR NOT NULL,
   PRIMARY KEY (seat_Id),
   FOREIGN KEY (ent_Id) REFERENCES movie_room(ent_Id)
 );
 INSERT INTO Seat VALUES
-  ('E1S1','01', 'R1','E1'),
-  ('E1S2','02', 'R1','E1'),
-  ('E1S3','03', 'R2','E1'),
-  ('E1S4','04', 'R2','E1'),
-  ('E1S5','05', 'R3','E1'),
-  ('E2G1','01', 'R1','E2'),
-  ('E2G2','02', 'R1','E2'),
-  ('E2G3','03', 'R2','E2'),
-  ('E2G4','04', 'R2','E2'),
-  ('E2G5','05', 'R3','E2'),
-  ('E3E1','01', 'R1','E3'),
-  ('E3E2','02', 'R1','E3'),
-  ('E3E3','03', 'R2','E3'),
-  ('E3E4','04', 'R2','E3'),
-  ('E3E5','05', 'R3','E3');
-  
+  ('E1S1','01', 'R1','ENT1'),
+  ('E1S2','02', 'R1','ENT1'),
+  ('E1S3','03', 'R2','ENT1'),
+  ('E1S4','04', 'R2','ENT1'),
+  ('E1S5','05', 'R3','ENT1'),
+  ('E2G1','01', 'R1','ENT2'),
+  ('E2G2','02', 'R1','ENT2'),
+  ('E2G3','03', 'R2','ENT2'),
+  ('E2G4','04', 'R2','ENT2'),
+  ('E2G5','05', 'R3','ENT2'),
+  ('E3E1','01', 'R1','ENT3'),
+  ('E3E2','02', 'R1','ENT3'),
+  ('E3E3','03', 'R2','ENT3'),
+  ('E3E4','04', 'R2','ENT3'),
+  ('E3E5','05', 'R3','ENT3');
+
   SELECT * FROM Seat
 ```
 
@@ -129,7 +129,7 @@ INSERT INTO Ticket VALUES
   ('TCK2', 'P2', 'SHW2', '300'),
   ('TCK3', 'P3', 'SHW3', '925'),
   ('TCK4', 'P4', 'SHW4', '1030');
-  
+
   SELECT * FROM Ticket
 ```
 
@@ -152,6 +152,6 @@ INSERT INTO Reservation VALUES
   ('RE02', 'TCK2', 'SHW2', 'E1S2'),
   ('RE03', 'TCK3', 'SHW3', 'E3E5'),
   ('RE04', 'TCK4', 'SHW4', 'E3E5');
-  
+
   SELECT * FROM Reservation
 ```
