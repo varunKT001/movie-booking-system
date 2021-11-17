@@ -127,6 +127,7 @@
 #### Movie
 
 1. **FDs**
+   movie_id &#8594; {movie_name, duration, genre, rating, lang}
    movie_name &#8594; {duration, genre, rating}
 
 2. **Candidate Key**
@@ -139,8 +140,34 @@
    Since there is only one attribute in the candidate key, all the non-key attributes are fully functional dependent on the primary key, and hence the relation is in 2NF form.
 
 5. **3NF**
-   Since there are no transitive dependencies present (no non-prime attribute derives other non-prime attributes), the relation is in 3NF.
+   There is a transitive dependency, since a non-prime attribute `movie_name` defines other non-prime attribute `duration` `genre` `rating`
+   To overcome this problem we need to decompose our relation into two relation:
+
+   movie-name (movie_id, movie_name, lang)
+   CANDIDATE KEY = movie_id
+
+   name-info (movie_name, duration, genre, rating)
+   CANDIDATE KEY = movie_name
+
+   | movie_id | movie_name | lang |
+   | -------- | ---------- | ---- |
+   |          |            |      |
+   |          |            |      |
+
+   | movie_name | duration | genre | rating |
+   | ---------- | -------- | ----- | ------ |
+   |            |          |       |        |
+   |            |          |       |        |
+
+   FD(movie-name):
+   movie_id &#8594; {movie_name, lang}
+
+   FD(name-info):
+   movie_name &#8594; {duration, genre, rating}
+
+   Now there is no transitive dependency, the relations are in 3NF.
 
 6. **BCNF**
+   movie_id &#8594; {movie_name, lang}
    movie_name &#8594; {duration, genre, rating}
    Since the left side of the FD is the super key, the relation follows BCNF.
