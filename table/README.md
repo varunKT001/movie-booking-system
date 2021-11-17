@@ -3,11 +3,13 @@
 ```sh
 CREATE TABLE movie
 (
+  movie_id VARCHAR NOT NULL,
   movie_Name VARCHAR NOT NULL,
   duration VARCHAR NOT NULL,
   genre VARCHAR NOT NULL,
   rating VARCHAR NOT NULL,
-  PRIMARY KEY (movie_Name)
+  lang VARCHAR NOTNULL,
+  PRIMARY KEY (movie_id)
 );
  INSERT INTO Movie VALUES
   ('Inception', '148', 'Thriller', '5'),
@@ -64,10 +66,10 @@ CREATE TABLE shows
   show_slot VARCHAR NOT NULL,
   show_Date DATE NOT NULL,
   ent_Id VARCHAR NOT NULL,
-  movie_Name VARCHAR NOT NULL,
+  movie_id VARCHAR NOT NULL,
   PRIMARY KEY (show_Id),
   FOREIGN KEY (ent_Id) REFERENCES movie_room(ent_Id),
-  FOREIGN KEY (movie_Name) REFERENCES movie(movie_Name)
+  FOREIGN KEY (movie_id) REFERENCES movie(movie_id)
 );
 INSERT INTO Shows VALUES
   ('SHW1', 'slotA', '2021-09-07', 'ENT1', 'The Eternals'),
