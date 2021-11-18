@@ -22,7 +22,7 @@ CREATE TABLE Movie
   duration VARCHAR NOT NULL,
   genre VARCHAR NOT NULL,
   rating VARCHAR NOT NULL,
-  lang VARCHAR NOTNULL,
+  lang VARCHAR NOT NULL,
   PRIMARY KEY (movie_id)
 );
 

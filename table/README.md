@@ -8,13 +8,15 @@ CREATE TABLE movie
   duration VARCHAR NOT NULL,
   genre VARCHAR NOT NULL,
   rating VARCHAR NOT NULL,
-  lang VARCHAR NOTNULL,
+  lang VARCHAR NOT NULL,
   PRIMARY KEY (movie_id)
 );
  INSERT INTO Movie VALUES
-  ('Inception', '148', 'Thriller', '5'),
-  ('Iron-Man 2', '100', 'Sci-Fi', '5'),
-  ('The Eternals', '157', 'Sci-Fi', '4');
+  ('MV1', 'Inception', '148', 'Thriller', '5', 'E'),
+  ('MV2', 'Iron-Man 2', '100', 'Sci-Fi', '5', 'E'),
+  ('MV3', 'The Eternals', '157', 'Sci-Fi', '4', 'E'),
+  ('MV4', 'The Eternals', '157', 'Sci-Fi', '4', 'H'),
+  ('MV5', 'Iron-Man 2', '100', 'Sci-Fi', '5', 'H');
 
   SELECT * FROM Movie
 ```
@@ -72,10 +74,10 @@ CREATE TABLE shows
   FOREIGN KEY (movie_id) REFERENCES movie(movie_id)
 );
 INSERT INTO Shows VALUES
-  ('SHW1', 'slotA', '2021-09-07', 'ENT1', 'The Eternals'),
-  ('SHW2', 'slotB', '2021-08-05', 'ENT2', 'Inception'),
-  ('SHW3', 'slotC', '2021-06-11', 'ENT3', 'Iron-Man 2'),
-  ('SHW4', 'slotD', '2021-06-23', 'ENT3', 'Iron-Man 2' );
+  ('SHW1', 'slotA', '2021-09-07', 'ENT1', 'MV3'),
+  ('SHW2', 'slotB', '2021-08-05', 'ENT2', 'MV1'),
+  ('SHW3', 'slotC', '2021-06-11', 'ENT3', 'MV2'),
+  ('SHW4', 'slotD', '2021-06-23', 'ENT3', 'MV2');
 
   SELECT * FROM Shows
 ```
